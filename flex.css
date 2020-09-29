@@ -1,0 +1,161 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000;
+}
+.container
+{
+position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+-webkit-box-refllect: below 1px linear-gradient(#0001,#0004);
+}
+.container .mno
+{
+position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #000000;
+    animation:animate 2s linear infinite ;
+}
+@keyframes animate
+{
+0%
+{
+    transform: rotate(0deg);
+}
+
+                
+    100%
+    {
+transform: rotate(360deg);
+    }
+}
+.container .mno::before
+{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+background: linear-gradient(to top,transparent,rgba(0,255,249,0.4));
+background-size: 100px 180px;
+background-repeat:no-repeat;
+border-top-left-radius:100px ;
+border-bottom-left-radius:100px ;
+}
+.container.mno::after
+{
+contain: '';
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 20px;
+height: 20px;
+background:#147c7abc;
+border-radius:50% ;
+z-index: 10;
+box-shadow: 0 0 10px#33ff0066,
+0 0 20px #00fff966,
+0 0 30px #00fff966,
+0 0 40px #00fff966,
+0 0 50px #00ff7766,
+0 0 60px #00fff966,
+0 0 70px #00fff966,
+0 0 80px #00fff966,
+0 0 90px #00ff4c66,
+0 0 100px #15ff0066,
+}
+.container.mno span
+{
+    position:absolute ;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #703535;
+border-radius:50% ;
+}
+/* ال فليكس */
+.math1{
+    display: flex;
+    align-items: stretch;
+    
+    background-color: rgb(255, 92, 78);
+}
+.math1> div {
+    background-color: #f1f1f1;
+    width: 70px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  .math2 {
+    display: flex;
+    align-items: stretch;
+    background-color: #f1f1f1;
+  }
+  
+  .math2 > div {
+    background-color: rgb(247, 247, 248);
+    color: rgb(12, 12, 12);
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
